@@ -1,0 +1,7 @@
+*.log
+*.tmp
+Test_Choice.log
+Test_Sto.log
+Test_Color.log
+Test_StoColor.log
+Test_OpenCV.log
