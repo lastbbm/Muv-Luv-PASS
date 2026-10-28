@@ -1,9 +1,9 @@
 # Muv-Luv-PASS
 
-Muv-Luv 少女花园（マブラヴ ガールズガーデン）PC 端自动化助手，V1.0。
+Muv-Luv 少女花园/少女庭院（マブラヴ ガールズガーデン）PC 端自动化助手，V1.0。
 
 基于 [LaunchLee/Assist_MuvLuv](https://github.com/LaunchLee/Assist_MuvLuv)（GPL-3.0）修改：AutoIt + OpenCV，
-直接对 PC 客户端窗口截图识别并点击，**不经过模拟器**。
+直接对 PC 客户端窗口截图识别并点击。
 
 ## 功能
 
