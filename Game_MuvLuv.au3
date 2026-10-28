@@ -426,14 +426,14 @@ Func _FindChoiceBands()
     Local $hDC = _WinAPI_CreateCompatibleDC(0)
     Local $hOld = _WinAPI_SelectObject($hDC, $hBmp)
 
-    Local $aXSamples[7] = [640, 700, 800, 900, 1000, 1100, 1230]
     Local $aBands[2][2], $iFound = 0, $iStart = -1, $iLastPink = -1
     For $iY = 200 To 560 Step 8
-        Local $iCnt = 0
-        For $i = 0 To 6
-            If _IsPinkAtDC($hDC, $aXSamples[$i], $iY) Then $iCnt += 1
+        Local $iTotal = 0, $iPink = 0
+        For $iX = 640 To 1240 Step 20
+            $iTotal += 1
+            If _IsPinkAtDC($hDC, $iX, $iY) Then $iPink += 1
         Next
-        If $iCnt >= 5 Then
+        If $iTotal > 0 And ($iPink / $iTotal) >= 0.6 Then
             If $iStart < 0 Then $iStart = $iY
             $iLastPink = $iY
         Else
